@@ -1,20 +1,23 @@
-//swapping two numbers and taking the values from the user
+/*Write a function that takes two Distance values as arguments and returns the larger one. Include a main() program that accepts two Distance values
+from the user, compares them, and displays the larger.*/
+
 #include <iostream>
 using namespace std;
-
-int main(void)
+int distance(int a, int b){
+    if(a > b){
+        return a;
+    }
+    else{
+        return b;
+    }
+}
+int main()
 {
-    int a,b;
-    cout<<"Enter the value of a and b : ";
-    cin>>a>>b;
-
-    cout<<"Value of a before swapping is : "<<a<<endl;
-    cout<<"Value of b before swapping is : "<<b<<endl;
-
-    int temp = a;
-    a = b;
-    b = temp;
-
-    cout<<"Value of a after swapping is : "<<a<<endl;
-    cout<<"Value of b after swapping is : "<<b<<endl;
+    int d1,d2;
+    cout<<"Enter the value of d1 and d2 : ";
+    cin>>d1>>d2;
+    int temp = distance(d1,d2);
+    cout<<"a = "<<d1<<endl;
+    cout<<"b = "<<d2<<endl;
+    cout<<"Maximum distance = "<<temp;
 }
